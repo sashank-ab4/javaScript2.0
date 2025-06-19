@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body class="lightMode">
+  <button class="toggle">  Light mode</button>
+  <style>
+    .lightMode {
+      background-color: whitesmoke;
+      color: black;
+transition: background-color 0.3s, color 0.3s; 
+    }
+
+    .darkMode {
+      background-color: black;
+      color: whitesmoke;
+    }
+
+    .toggle {
+      padding: 8px 6px;
+      background-color: rgb(81, 81, 191);
+      border-radius: 4px;
+    }
+    .toggle:hover{
+opacity: 0.9;
+transition: 300ms;
+    }
+  </style>
+  <script>
+    let btn = document.querySelector('.toggle')
+    let body = document.body
+
+    body.addEventListener('click', function () {
+      body.classList.toggle('darkMode')
+
+     if (btn.innerText === 'Light Mode') {
+  btn.innerText = 'Dark Mode';   // ✅ Assignment, not comparison
+} else {
+  btn.innerText = ' Light Mode';
+}}
+    )
+
+
+</script>
+</body>
+
+</html>
